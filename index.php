@@ -1,9 +1,10 @@
 
 
 
+
 <!DOCTYPE html>
 <html lang="en">
-<?php include"head.php"?>
+<?php include"head.php";?>
 <body>
 
 <?php include"header.php";?>
@@ -47,8 +48,9 @@
         </button>
       </div>
       <div class="modal-body">
-      <form>
+      <form method="POST" action="sucesso.php">
             <div class="form-group"> 
+            <INPUT TYPE="text" name="nomeProduto" value="<?php echo $produto["nome"]; ?>" hidden>
             <input type ="text" name="nomeCliente" placeholder="Nome Completo">
             </div>
             
@@ -67,11 +69,12 @@
             <div  class="form-group">
             <input type ="number"  maxlength ="3" name="cvvCartao" placeholder="CVV do Cartão">
             </div>
-        </form>
+     
       </div>
       <div class="modal-footer">
         <div class="text-primary" >Preço total: R$ <?php echo $produto["preco"]; ?></div>
-        <button type="button" class="btn btn-primary">Finalizar Compra</button>
+        <button type="submit" class="btn btn-primary">Finalizar Compra</button>
+        </form>
       </div>
     </div>
   </div>
