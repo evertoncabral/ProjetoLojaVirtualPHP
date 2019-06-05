@@ -1,28 +1,22 @@
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <?php include"head.php";?>
 <body>
-
 <?php include"header.php";?>
-
-
 <main class="container mt-5">
 <section class="row">
-<?php  foreach($produtos as $chave =>$produto): ?>
-
+<?php  foreach($produtos as $chave =>$produto):   
+  ?>
+  
     <!--  coluna para segurar CARD from bootstrap-->
     <div class="col-md-4 mt-3">
         <div class="card" style="width: 18rem;">
-            <img src="<?php echo $produto["img"] ?>" class="card-img-top" alt="...">
+            <img src="<?php echo $produto["img"]; ?>" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title"><?php echo $produto["nome"];?></h5>
                 <p class="card-text"><?php echo $produto ["descricao"];?></p>
                 <h4 class="text-sucess">R$<?php echo $produto["preco"]; ?></h4>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#<?php echo $chave; ?>">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#<?php echo $produto["id"]; ?>">
                         Comprar
                         </button>
             </div>
@@ -38,7 +32,7 @@
 <!-- Modal -->
 <?php foreach($produtos as $chave => $produto): ?>
 
-<div class="modal fade" id="<?php echo $chave; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="<?php echo $produto["id"]; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
