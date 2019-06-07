@@ -44,7 +44,7 @@
       <div class="modal-body">
       <form method="POST" action="sucesso.php">
             <div class="form-group"> 
-            <INPUT TYPE="text" name="nomeProduto" value="<?php echo $produto["nome"]; ?>" hidden>
+            <INPUT type="text" name="nomeProduto" value="<?php echo $produto["nome"]; ?>" hidden>
             <input type ="text" name="nomeCliente" placeholder="Nome Completo">
             </div>
             
