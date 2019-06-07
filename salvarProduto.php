@@ -43,7 +43,7 @@ if ($errorEnvio !==0){
 
 }
 
-if(array_search($typeFile,$imgAceita) == false ){
+if(!is_numeric(array_search($typeFile,$imgAceita) == false ))){
     echo'<h1>Extensão do arquivo inválida. Verifique se o arquivo é uma imagem do tipo .png ou.jpeg ou .jpg!</h1>';
     echo' <a clas="btn btn-primary" href="cadastroProduto.php">Voltar para a página de cadastro de produtos</a>';
     
