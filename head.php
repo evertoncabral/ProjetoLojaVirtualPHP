@@ -6,7 +6,7 @@ $usuario = logarUsuario("Everton Cabral", 1);
 $jsonProdutos = file_get_contents("Produtos.json");
 $produtos = json_decode($jsonProdutos,true);
 $produtos=$produtos["Produtos"];
-addProduto("Curso Mobile Android","Curso para criar app",2300,"imagem/imagem02.png");
+
 $categorias = ["Cursos","Tutoriais","Artigos","Forum","Codigos"];
 ?>
 
