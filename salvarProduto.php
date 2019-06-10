@@ -7,16 +7,11 @@ foreach($_POST as $item){
         $item == ''?$contadorInputVazio++:0;
 }
 
-
-
 if ($contadorInputVazio == count($_POST)){
     
     echo'<h1>Você não enviou nenhuma informação sobre o produto</h1>';
     echo' <a clas="btn btn-primary" href="cadastroProduto.php">Voltar para a página de cadastro de produtos</a>'; 
-
-
     exit;
-
 }
 
 

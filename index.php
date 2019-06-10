@@ -5,9 +5,8 @@
 <?php include"header.php";?>
 <main class="container mt-5">
 <section class="row">
-<?php  foreach($produtos as $chave =>$produto):   
-  ?>
-  
+<?php  foreach($produtos as $chave=>$produto):   
+  ?>  
     <!--  coluna para segurar CARD from bootstrap-->
     <div class="col-md-4 mt-3">
         <div class="card" style="width: 18rem;">
